@@ -1,0 +1,207 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1f2937, #4b5563, #f3f4f6);
+    color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #0f172a, #be123c);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .username {
+    color: #f3f4f6;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.sidebar a {
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f9fafb;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #f87171;
+    color: #1e293b;
+}
+
+.sidebar .active {
+    background-color: #f87171;
+    color: #1e293b;
+}
+
+/* Logout and Delete Account Buttons */
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-btn {
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    color: #f9fafb;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.logout:hover {
+    background-color: #be123c;
+    color: #f3f4f6;
+}
+
+.delete-account {
+    color: #e11d48;
+    font-weight: bold;
+}
+
+.delete-account:hover {
+    background-color: #b91c1c;
+    color: #fff;
+}
+
+.delete-account i {
+    margin-right: 5px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #0f172a;
+    color: #f9fafb;
+    border: none;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding-top: 15px;
+    }
+    .toggle-btn {
+        display: block;
+    }
+}
+
+/* Content Styling */
+.content {
+    margin-left: 250px;
+    padding: 60px 30px;
+    transition: margin-left 0.3s;
+    text-align: center;
+    color: #f9fafb;
+    background: linear-gradient(#2d0892, #ff5555, #fee2e2);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Text Animations */
+.title {
+    font-size: 2.5rem;
+    color: #f9fafb;
+    margin-top: 20px;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    margin: 20px 0;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out 0.5s both;
+}
+
+/* Form Styling */
+.transaction-form {
+    background-color: #4b5563;
+    padding: 30px;
+    border-radius: 10px;
+    color: #f9fafb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.transaction-form label {
+    font-weight: bold;
+}
+
+.transaction-form input[type="text"],
+.transaction-form input[type="number"],
+.transaction-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #0f172a;
+    border-radius: 5px;
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.transaction-form input[type="submit"] {
+    background-color: #be123c;
+    color: #f9fafb;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.transaction-form input[type="submit"]:hover {
+    background-color: #f87171;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

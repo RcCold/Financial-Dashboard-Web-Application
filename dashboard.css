@@ -1,0 +1,203 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9b5de5, #f3a683, #d8e2dc);
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #574b90, #6a0572);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .username {
+    color: #d8e2dc;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.sidebar a {
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f0f0f0;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #f3d1f4;
+    color: #3b3b58;
+}
+
+.sidebar .active {
+    background-color: #d8e2dc;
+    color: #574b90;
+}
+
+/* Logout and Delete Account Buttons */
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-btn {
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar {
+    transition: width 0.3s ease;
+}
+
+.content {
+    transition: margin-left 0.3s ease;
+}
+
+
+.logout:hover {
+    background-color: #6a0572;
+    color: #d8e2dc;
+}
+
+.delete-account {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.delete-account:hover {
+    background-color: #c9302c;
+    color: #fff;
+}
+
+.delete-account i {
+    margin-right: 5px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #574b90;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding-top: 15px;
+    }
+    .toggle-btn {
+        display: block;
+    }
+}
+
+/* Content Styling */
+.content {
+    margin-left: 250px;
+    padding: 60px 30px;
+    transition: margin-left 0.3s;
+    text-align: center;
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #9b5de5, #e0aaff, #f3d1f4);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Text Animations */
+.title {
+    font-size: 2.5rem;
+    color: #f3d1f4;
+    margin-top: 20px;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #f0e5e9;
+    margin: 20px 0;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out 0.5s both;
+}
+
+/* Dashboard Summaries and Chart Container */
+.dashboard-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.summary-box {
+    background-color: #6a0572;
+    color: #d8e2dc;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.chart-container {
+    width: 60%;
+    margin: 40px auto;
+    background-color: #6a0572;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

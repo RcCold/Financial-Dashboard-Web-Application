@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wina Bwangu Web App - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="common.js" defer></script>
+</head>
+<body>
+    <!-- Authentication Check -->
+    <script>
+        const currentUserEmail = localStorage.getItem('currentUser');
+        if (!currentUserEmail || !localStorage.getItem(currentUserEmail)) {
+            window.location.href = 'signin.html';
+        }
+    </script>
+    
+    <!-- Side Navigation Bar -->
+    <div class="sidebar" id="sidebar">
+        <div class="username">Hello, <span id="username">User</span>!</div>
+        <a href="index.html" class="active">Home</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="services.html">Services</a>
+        <a href="history.html">History</a>
+
+        <!-- Logout and Delete Account Buttons -->
+        <div class="sidebar-bottom">
+            <a href="#" class="sidebar-btn logout" onclick="logout()">Logout</a>
+            <a href="#" class="sidebar-btn delete-account" onclick="deleteAccount()">
+                <i class="bi bi-trash"></i> Delete Account
+            </a>
+        </div>
+    </div>
+
+    <!-- Toggle Button for Sidebar -->
+    <button class="toggle-btn" id="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Home Content -->
+    <div class="content fade-in">
+        <h1 class="title">Welcome to Wina Bwangu</h1>
+        <p class="description">Experience seamless, efficient, and secure financial transactions.</p>
+
+        <!-- Animated Button for Call to Action -->
+        <a href="services.html" class="btn-cta">Explore Services</a>
+
+        <!-- About Us Section -->
+        <div class="about-section mt-5">
+            <h2>About Wina Bwangu</h2>
+            <p>Founded with a commitment to bringing financial services to every corner of Lusaka, Wina Bwangu is here to empower communities through accessible, efficient, and safe financial transactions. Our mobile booths are strategically located to serve our customers where they are, ensuring convenience and ease.</p>
+            <p>We believe in providing secure and innovative solutions that help customers manage their money with confidence. Our team is dedicated to advancing financial accessibility, and we are continually evolving to meet the growing needs of our clients.</p>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="mission-section mt-5">
+            <h2>Our Mission</h2>
+            <p>At Wina Bwangu, our mission is simple: to make financial services more accessible, affordable, and adaptable to the lifestyles of our customers. We are driven by our core values of trust, efficiency, and customer satisfaction. Through our comprehensive services—such as Airtel Money, MTN Money, Zamtel Money, Zanaco, and FNB—we bring financial empowerment right to your fingertips.</p>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="why-choose-us-section mt-5">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Convenience:</strong> With mobile booths spread across Lusaka, accessing financial services has never been easier.</li>
+                <li><strong>Security:</strong> Your transactions are protected with state-of-the-art security protocols to ensure your peace of mind.</li>
+                <li><strong>Customer-Centric:</strong> Our services are designed around your needs, making sure every experience is smooth and hassle-free.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

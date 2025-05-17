@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wina Bwangu Web App - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="username">Hello, <span id="username">User</span>!</div>
+        <a href="index.html">Home</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="services.html">Services</a>
+        <a href="history.html">History</a>
+
+        <!-- Logout and Delete Account Buttons -->
+        <div class="sidebar-bottom">
+            <a href="#" class="sidebar-btn logout" onclick="logout()">Logout</a>
+            <a href="#" class="sidebar-btn delete-account" onclick="deleteAccount()">
+                <i class="bi bi-trash"></i> Delete Account
+            </a>
+        </div>
+    </div>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" id="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Dashboard Content -->
+    <div class="content fade-in">
+        <h1 class="title">Dashboard</h1>
+        <p class="description">Track your financial activities and view insights.</p>
+
+        <!-- Summary Section -->
+        <div class="dashboard-summary">
+            <h3>Total Revenue and Remaining Monthly Limits</h3>
+            <ul id="dashboard-summary-list"></ul>
+        </div>
+
+        <!-- Pie Chart (Revenue Distribution) -->
+        <div class="chart-container">
+            <canvas id="activityPieChart"></canvas>
+        </div>
+
+        <!-- Bar Chart (Remaining Monthly Limit) -->
+        <div class="chart-container">
+            <canvas id="activityBarChart"></canvas>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

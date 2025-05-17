@@ -1,0 +1,45 @@
+/* General Body Styling */
+body {
+    background: linear-gradient(135deg, #2a5298, #6a0572, #b8d7f8);
+    color: #2e2e2e;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Form Container */
+.signin-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.title, .description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #4a6fa5;
+    font-size: 1.1rem;
+}
+
+.form-check-label, .form-text {
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #4a6fa5;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2a5298;
+}

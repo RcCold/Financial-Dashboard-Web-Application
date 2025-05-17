@@ -1,0 +1,206 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #364f6b, #dcdde1);
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #999393, #9b5b5b);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .username {
+    color: #f7a82e;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.sidebar a {
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f0f0f0;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #e8e8e8;
+    color: #1e1e1e;
+}
+
+.sidebar .active {
+    background-color: #f7a82e;
+    color: #333;
+}
+
+/* Logout and Delete Account Buttons */
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-btn {
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.logout:hover {
+    background-color: #ec971f;
+    color: #333;
+}
+
+.delete-account {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.delete-account:hover {
+    background-color: #c9302c;
+    color: #fff;
+}
+
+.delete-account i {
+    margin-right: 5px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #333;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding-top: 15px;
+    }
+    .toggle-btn {
+        display: block;
+    }
+}
+
+/* Content Styling */
+.content {
+    margin-left: 250px;
+    padding: 60px 30px;
+    transition: margin-left 0.3s;
+    text-align: center;
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #1a1a2e, #2e3b55, #faf3dd);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Text Animations */
+.title {
+    font-size: 2.5rem;
+    color: #fdfdfd;
+    margin-top: 20px;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #d9d9d9;
+    margin: 20px 0;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out 0.5s both;
+}
+
+/* Service Cards */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #364f6b;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.service-card:hover {
+    background-color: #f7a82e;
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffd700;
+    transition: color 0.3s;
+}
+
+.service-card:hover h3 {
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.3s;
+}
+
+.service-card:hover p {
+    color: #2e2e2e;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
